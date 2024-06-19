@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_guest_to_view": 1,
  "allow_rename": 1,
  "creation": "2024-06-19 11:30:50.808879",
  "doctype": "DocType",
@@ -11,7 +12,9 @@
   "date",
   "capacity",
   "price",
-  "category"
+  "category",
+  "route",
+  "published"
  ],
  "fields": [
   {
@@ -56,11 +59,23 @@
    "label": "Category",
    "options": "gratis\nberbayar",
    "reqd": 1
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "default": "0",
+   "fieldname": "published",
+   "fieldtype": "Check",
+   "label": "Published"
   }
  ],
+ "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-19 11:46:43.032072",
+ "modified": "2024-06-19 20:15:19.432386",
  "modified_by": "Administrator",
  "module": "Event Management",
  "name": "Events",
@@ -77,8 +92,19 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "test",
+   "share": 1,
+   "write": 1
   }
  ],
+ "route": "events",
  "sort_field": "creation",
  "sort_order": "DESC",
  "states": []
