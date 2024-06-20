@@ -4,6 +4,13 @@ app_publisher = "konoha"
 app_description = "event management"
 app_email = "teamkonoha@tandigital.id"
 app_license = "mit"
+
+doc_events = {
+    "User": {
+        "after_insert": "event_management.api.assign_role_to_user"
+    }
+}
+
 # required_apps = []
 
 # Includes in <head>

@@ -9,7 +9,8 @@
   "participant",
   "event",
   "status",
-  "payment_bill"
+  "payment_bill",
+  "gbgb"
  ],
  "fields": [
   {
@@ -20,7 +21,7 @@
    "fieldname": "participant",
    "fieldtype": "Link",
    "label": "Participant",
-   "options": "Participants"
+   "options": "User"
   },
   {
    "fieldname": "event",
@@ -38,11 +39,17 @@
    "fieldname": "payment_bill",
    "fieldtype": "Attach Image",
    "label": "Payment Bill"
+  },
+  {
+   "fetch_from": "event.name1",
+   "fieldname": "gbgb",
+   "fieldtype": "Data",
+   "label": "gbgb"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-19 11:39:26.873334",
+ "modified": "2024-06-20 17:01:41.659167",
  "modified_by": "Administrator",
  "module": "Event Management",
  "name": "Transactions",
