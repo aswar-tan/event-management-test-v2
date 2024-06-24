@@ -3,15 +3,12 @@
 
 import frappe
 from frappe.model.document import Document
+from frappe.utils import now_datetime
 
 
 class Transactions(Document):
     def before_insert(self):
         self.check_product_price()
-    
-    def validate(self):
-        self.check_product_price()
-
     def check_product_price(self):
         # Ambil detail produk berdasarkan Event yang terkait dengan transaksi
         event = frappe.get_doc("Events", self.event)
@@ -26,4 +23,5 @@ class Transactions(Document):
             self.status = 'Menunggu Konfirmasi'
         
         # Set pengguna yang melakukan transaksi
-        self.user = frappe.session.user
+        self.participant = frappe.session.user
+        self.date = now_datetime()

@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_guest_to_view": 1,
- "allow_rename": 1,
+ "autoname": "{name1}-.{#####}",
  "creation": "2024-06-19 11:30:50.808879",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -75,10 +75,11 @@
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-19 20:15:19.432386",
+ "modified": "2024-06-20 21:39:29.204760",
  "modified_by": "Administrator",
  "module": "Event Management",
  "name": "Events",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {
@@ -90,16 +91,6 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "test",
    "share": 1,
    "write": 1
   }
